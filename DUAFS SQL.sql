@@ -7,18 +7,18 @@ CREATE DATABASE DUAFS;
 USE DUAFS;
 
 CREATE TABLE user (
-   	user_id INT NOT NULL AUTO_INCREMENT,
-   	username VARCHAR(255) NOT NULL,
-   	password VARCHAR(255) NOT NULL,
-   	email VARCHAR(255) NOT NULL,
+    	user_id INT NOT NULL AUTO_INCREMENT,
+    	username VARCHAR(255) NOT NULL,
+    	password VARCHAR(255) NOT NULL,
+    	email VARCHAR(255) NOT NULL,
 	first_name VARCHAR(255) NOT NULL,
 	middle_initial VARCHAR(255) DEFAULT '',
 	last_name VARCHAR(255) NOT NULL,
     	is_student BOOLEAN NOT NULL DEFAULT FALSE,
     	is_professor BOOLEAN NOT NULL DEFAULT FALSE,
-   	is_advisor BOOLEAN NOT NULL DEFAULT FALSE,
+    	is_advisor BOOLEAN NOT NULL DEFAULT FALSE,
 	is_administrator BOOLEAN NOT NULL DEFAULT FALSE,
-   	PRIMARY KEY (user_id)
+    	PRIMARY KEY (user_id)
 );
 
 CREATE TABLE college (
@@ -81,7 +81,7 @@ CREATE TABLE student (
 	student_id INT NOT NULL AUTO_INCREMENT,
 	user_id INT NOT NULL,
 	is_undergraduate BOOLEAN NOT NULL DEFAULT TRUE,
-	major_code VARCHAR(10) NOT NULL,
+	major_code VARCHAR(10),
 	minor_code VARCHAR(10),
 	advisor_id INT NOT NULL,
 	PRIMARY KEY (student_id),
@@ -121,8 +121,8 @@ CREATE TABLE section (
 	section_id INT NOT NULL AUTO_INCREMENT,
 	start_time TIME NOT NULL,
 	end_time TIME NOT NULL,
-	days VARCHAR(20),
-	semester VARCHAR (20),
+	days VARCHAR(20) NOT NULL,
+	semester VARCHAR (20) NOT NULL,
 	start_date DATE NOT NULL,
 	end_date DATE NOT NULL,
 	room_id INT NOT NULL,
@@ -144,4 +144,19 @@ CREATE TABLE enrollment (
 	PRIMARY KEY (enrollment_id),
 	FOREIGN KEY (student_id) REFERENCES student(student_id),
 	FOREIGN KEY (section_id) REFERENCES section (section_id)
+);
+
+CREATE TABLE meeting (
+	meeting_id INT NOT NULL AUTO_INCREMENT,
+    	meeting_date DATE NOT NULL,
+	start_time TIME NOT NULL,
+	meeting_type VARCHAR(50) NOT NULL,
+    	professor_id INT, 
+    	advisor_id INT,
+    	student_id INT,
+    	room_id INT NOT NULL, 
+    	PRIMARY KEY (meeting_id),
+    	FOREIGN KEY (student_id) REFERENCES student(student_id),
+    	FOREIGN KEY (professor_id) REFERENCES professor(professor_id),
+    	FOREIGN KEY (advisor_id) REFERENCES advisor(advisor_id)
 );
