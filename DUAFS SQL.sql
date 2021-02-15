@@ -7,18 +7,18 @@ CREATE DATABASE DUAFS;
 USE DUAFS;
 
 CREATE TABLE user (
-    user_id INT NOT NULL AUTO_INCREMENT,
-    username VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
+   	user_id INT NOT NULL AUTO_INCREMENT,
+   	username VARCHAR(255) NOT NULL,
+   	password VARCHAR(255) NOT NULL,
+   	email VARCHAR(255) NOT NULL,
 	first_name VARCHAR(255) NOT NULL,
 	middle_initial VARCHAR(255) DEFAULT '',
 	last_name VARCHAR(255) NOT NULL,
-    is_student BOOLEAN NOT NULL DEFAULT FALSE,
-    is_professor BOOLEAN NOT NULL DEFAULT FALSE,
-    is_advisor BOOLEAN NOT NULL DEFAULT FALSE,
+    	is_student BOOLEAN NOT NULL DEFAULT FALSE,
+    	is_professor BOOLEAN NOT NULL DEFAULT FALSE,
+   	is_advisor BOOLEAN NOT NULL DEFAULT FALSE,
 	is_administrator BOOLEAN NOT NULL DEFAULT FALSE,
-    PRIMARY KEY (user_id)
+   	PRIMARY KEY (user_id)
 );
 
 CREATE TABLE college (
