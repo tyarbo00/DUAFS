@@ -38,13 +38,15 @@ CREATE TABLE department (
 CREATE TABLE program (
 	program_id INT NOT NULL AUTO_INCREMENT,
 	title VARCHAR(255) NOT NULL,
+    	bachelor_degree BOOLEAN NOT NULL DEFAULT FALSE,
+	associate_degree BOOLEAN NOT NULL DEFAULT FALSE,
 	college_id INT NOT NULL,
 	PRIMARY KEY (program_id),
 	FOREIGN KEY (college_id) REFERENCES college(college_id)
 );
 
 CREATE TABLE major (
-	major_code VARCHAR(10) NOT NULL UNIQUE,
+	major_code INT NOT NULL UNIQUE,
 	title VARCHAR(255) NOT NULL,
 	program_id INT NOT NULL,
 	PRIMARY KEY (major_code),
@@ -52,7 +54,7 @@ CREATE TABLE major (
 );
 
 CREATE TABLE minor (
-	minor_code VARCHAR(10) NOT NULL UNIQUE,
+	minor_code INT NOT NULL UNIQUE,
 	title VARCHAR(255) NOT NULL,
 	program_id INT NOT NULL,
 	PRIMARY KEY (minor_code),
@@ -81,9 +83,9 @@ CREATE TABLE student (
 	student_id INT NOT NULL AUTO_INCREMENT,
 	user_id INT NOT NULL,
 	is_undergraduate BOOLEAN NOT NULL DEFAULT TRUE,
-	major_code VARCHAR(10),
-	minor_code VARCHAR(10),
-	advisor_id INT NOT NULL,
+	major_code INT,
+	minor_code INT,
+	advisor_id INT,
 	PRIMARY KEY (student_id),
 	FOREIGN KEY (user_id) REFERENCES user(user_id),
 	FOREIGN KEY (major_code) REFERENCES major(major_code),
@@ -107,14 +109,20 @@ CREATE TABLE room (
 	FOREIGN KEY (building_id) REFERENCES building(building_id)
 );
 
+CREATE TABLE subject (
+	subject_id INT NOT NULL AUTO_INCREMENT,
+    	title VARCHAR(255) NOT NULL,
+    	PRIMARY KEY (subject_id)
+);
+
 CREATE TABLE course (
 	course_id INT NOT NULL AUTO_INCREMENT,
 	title VARCHAR(255) NOT NULL,
 	description TEXT NOT NULL DEFAULT 'Description not found',
 	credit_hours INT NOT NULL,
-	department_id INT NOT NULL,
+	subject_id INT NOT NULL,
 	PRIMARY KEY (course_id),
-	FOREIGN KEY (department_id) REFERENCES department(department_id)
+	FOREIGN KEY (subject_id) REFERENCES subject(subject_id)
 );
 
 CREATE TABLE section (
