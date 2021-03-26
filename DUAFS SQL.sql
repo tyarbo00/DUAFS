@@ -14,7 +14,7 @@ CREATE TABLE user (
 	first_name VARCHAR(255) NOT NULL,
 	middle_initial VARCHAR(255) DEFAULT '',
 	last_name VARCHAR(255) NOT NULL,
-    	is_student BOOLEAN NOT NULL DEFAULT FALSE,
+    	is_student BOOLEAN NOT NULL DEFAULT TRUE,
     	is_professor BOOLEAN NOT NULL DEFAULT FALSE,
     	is_advisor BOOLEAN NOT NULL DEFAULT FALSE,
 	is_administrator BOOLEAN NOT NULL DEFAULT FALSE,
