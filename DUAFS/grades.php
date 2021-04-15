@@ -32,7 +32,7 @@
 
  <!-- Faculty Top -->
  <div class ="hometop">
-	<span>Faculty Services</span>
+	<span>My Grades</span>
  </div>
 
 

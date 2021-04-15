@@ -10,10 +10,7 @@
 <link rel="stylesheet" href="css/import.css">
 <link rel="stylesheet" type="text/css" href="css/default.css">
 <link rel="shortcut icon" href="images/lionbw.png" type="image/x-icon">
-<script type="text/javascript" src="myjs.js"></script>
-<style>
-<link rel="stylesheet" type="text/css" href="./css/myslides.css">
-</style>
+<script type="text/javascript" src="js/myjs.js"></script>
 
 <body>
 
@@ -34,38 +31,33 @@
  <div class ="hometop">
 	<img src="./images/lionbw.png" style="width:6%">
 	<span>Welcome to DUAFS!</span>
+	<br> </br>
  </div>
-
-
-  <!-- Home Section -->
-    
-	<div class="w3-row w3-padding-32">
-      <div class="w3-third">
-        <p></p>
-        
-      </div>
-      <div class="w3-third">
-        <p></p>
-       
-      </div>
-      <div class="w3-third">
-        <p></p>
-        
-      </div>
-    </div>
-  </div>
-
- 
-  
-
-<!-- End Page Content -->
-
 </div>
+
+<div class="announcement">
+  <h2>Campus Announcements</h2>
+  <p>The following deadlines are for fall 2021 College of Health Sciences programs:</p>
+  <p>April 15th - Surgical Technology<br>May 15th - Radiography<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Imaging Sciences - Diagnostic Medical Sonography
+  <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Imaging Sciences - Leadership
+  <br>May 20 - Dental Hygiene
+  <br>July 1 - AAS-BSDH Online Completion Program</p>
+  <p>Important dates for all UAFS students:</p>
+  <p>May 1st-7th: Final Exam Week
+  <br>May 7th-9th: Commencement
+  <br>May 10th: Spring intersession & Maymester classes begin
+  <br>May 14th: Spring grades available
+  </p>
+</div>
+<br> </br>
+
 
 <img src="./images/tower.jpg" class="w3-image w3-greyscale-min" style="width:100%" > 
 
 <!-- Footer -->
-
+<!--
+name=" Tyce Yarborough"
+!-->
 
 
 </body>

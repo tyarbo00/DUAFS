@@ -120,7 +120,6 @@ function emptyInputDelete($filename){
 
 
 
-
 function loginUser($conn, $username, $pwd ){
 	$uidExists = uidExists($conn, $username, $username);
 	
