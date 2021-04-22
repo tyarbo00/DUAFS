@@ -147,9 +147,9 @@ VALUES
    
 INSERT INTO minor
 VALUES
-    (1001,'Biology',13),
-    (1030,'Applied Statistics',14),
-    (4030,'General Technology - Automotive',3);
+	(1001,'Biology',13),
+        (1030,'Applied Statistics',14),
+        (4030,'General Technology - Automotive',3);
     
 INSERT INTO advisor 
 VALUES
@@ -201,7 +201,7 @@ VALUES
 	
 INSERT INTO student
 VALUES 	
-	(default,1,TRUE,4063,NULL,1),
+	(default,1,TRUE,4000,NULL,2),
 	(default,2,TRUE,4100,NULL,1),
 	(default,3,TRUE,0578,NULL,3),
 	(default,4,TRUE,2545,NULL,4),
@@ -310,15 +310,57 @@ VALUES
 	(default,'Intro to Education','Introduction to the historical, cultural, and philosophical foundations of our system of American public education. ',3,8),
 	(default,'Internship - ELEM','Internship at local elementary school. Must be approved. ',3,8),
 	(default,'Intro to Engineering I','This course explores the branches of engineering, the functions of an engineer, and the industries in which engineers work.',3,9),
-	(default,'Engineering Statistics','This course covers the role of statistics in engineering, probability, discrete random variables and probability distributions, continuous random variables and probability distributions, joint probability distributions, random sampling and data description',3,9);
+	(default,'Engineering Statistics','This course covers the role of statistics in engineering, probability, discrete random variables and probability distributions, continuous random variables and probability distributions, joint probability distributions, random sampling and data description.',3,9),
+	(default,'Personal Finance Applications','The course will cover financial responsibilities, planning for the future, budgets, income and careers, spending and credit, saving and investing.',2,10),
+	(default,'US History I','A course designed for furthering your knowledge and appreciation of our nations past, present, and future.',3,11),
+	(default,'Civ of World to 1500','This course surveys the development of society from Paleolithic times to the Reformation.',3,11),
+	(default,'Introduction to Film','This course introduces students to the basics of film analysis, cinematic formal elements, genre, and narrative structure and helps students develop the skills to recognize, analyze, describe and enjoy film as an art and entertainment form.',3,12),
+	(default,'Humanitites Thru the Arts','Humanities through the Arts explore the humanities with a focus on the role of the arts. It studies a variety of art forms and their interrelationships, including architecture, painting, sculpture, film/video, photography, drama, music and literature with an emphasis on Western art.',3,12),
+	(default,'Marketing Research','Marketing Research is concerned, primarily, with the systematic gathering and analysis of primary and secondary information to significantly reduce uncertainty in major marketing problem areas.',3,13),
+	(default,'Principles of Marketing','This course examines the business function of Marketing. Students will learn how marketers deliver value in satisfying customer needs and wants, determine which target markets the organization can best serve, and decide upon appropriate products, services, and programs to serve these markets.',3,13),
+	(default,'College Algebra','A course designed to examine, in detail, the applied, real-world, and theoretical mathematical implications of the mathematical concept of a function.',3,14),
+	(default,'Calculus I','This course introduces calculus using analytic geometry functions. Topics include limits and continuity, derivatives, optimization, related rates, graphing and other applications of derivatives, definite and indefinite integrals, and numerical integration.',3,14),
+	(default,'Differential Equations','This course includes the study of first order differential equations, higher order linear differential equations, Laplace transforms, numerical methods, boundary value and initial value problems, qualitative analysis of solutions, and applications of differential equations.',3,14),
+	(default,'ARC Welding Basic','This course introduces the student to the fundamentals of Welding. ... The student will also be instructed in the safe use of a plasma cutter, oxyacetalene cutting torch and various saws and grinders.',3,15),
+	(default,'TIG Welding Basic','This class is designed to familiarize students with the common and required safety practices of the welding industry.',3,15),
+	(default,'Introduction to Speech Comm','This course is an introduction to speech communication which emphasizes the practical skill of public speaking, including techniques to lessen speaker anxiety, and the use of visual aids to enhance speaker presentations.',3,16);
 
+INSERT INTO section
+VALUES
+	(default,'10:00','10:50','MWF','Fall','2021-08-23','2021-12-17',16,2,1),
+	(default,'11:00','11:50','MWF','Fall','2021-08-23','2021-12-17',16,2,1),
+	(default,'5:25','8:15','TR','Fall','2021-08-23','2021-12-17',3,1,2),
+	(default,'12:30','3:20','TR','Fall','2021-08-23','2021-12-17',28,3,3),
+	(default,'5:25','8:15','TR','Fall','2021-08-23','2021-12-17',28,25,3),
+	(default,'1:00','3:50','MW','Fall','2021-08-23','2021-12-17',29,25,4),
+	(default,'8:00','10:50','TR','Fall','2021-08-23','2021-12-17',29,3,4),
+	(default,'8:00','8:50','MWF','Fall','2021-08-23','2021-12-17',25,8,5),
+	(default,'8:00','9:15','TR','Fall','2021-08-23','2021-12-17',25,8,5),
+	(default,'1:00','1:50','TR','Fall','2021-08-23','2021-12-17',26,8,5),
+	(default,'11:00','12:50','R','Fall','2021-08-23','2021-12-17',26,8,6),
+	(default,'9:30','10:45','TR','Fall','2021-08-23','2021-12-17',27,8,7),
+	(default,'2:00','4:50','M','Fall','2021-08-23','2021-12-17',27,8,8),
+	(default,'8:00','8:50','MW','Fall','2021-08-23','2021-12-17',1,9,9),
+	(default,'2:00','2:50','MW','Fall','2021-08-23','2021-12-17',1,9,9),
+	(default,'5:25','8:15','TR','Fall','2021-08-23','2021-12-17',2,15,10),
+	(default,'4:00','5:15','TR','Fall','2021-08-23','2021-12-17',3,23,11),
+	(default,'8:00','8:50','W','Fall','2021-08-23','2021-12-17',19,6,12),
+	(default,'8:00','8:50','TR','Fall','2021-08-23','2021-12-17',4,14,13),
+	(default,'1:00','1:50','MW','Fall','2021-08-23','2021-12-17',4,14,13);
 	
-
-
 	
-    
-	
-	
-	
-	
+INSERT INTO enrollment
+VALUES
+	/* jbutle01 classes    */
+	(default,'2021-05-15','11:34',1,14,NULL),
+	(default,'2021-05-16','12:30',1,16,NULL),
+	(default,'2021-04-29','1:00',1,17,NULL),
+	(default,'2021-04-29','1:01',1,8,NULL),
+	(default,'2021-04-29','1:01',1,11,NULL),
+	/*  mmille00 classes   */
+	(default,'2021-05-20','11:00',2,3,NULL),
+	(default,'2021-05-11','12:30',2,5,NULL),
+	(default,'2021-04-1','1:00',2,6,NULL),
+	(default,'2021-04-15','5:45',2,12,NULL),
+	(default,'2021-04-28','6:00',2,13,NULL);
 	
