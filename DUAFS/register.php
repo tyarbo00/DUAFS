@@ -1,5 +1,9 @@
 <?php
 	include_once 'header.php';
+	include_once 'includes/dbh.inc.php';
+	
+		
+	
 ?>
 
 <!DOCTYPE html>
@@ -23,10 +27,9 @@
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
 <?php
-		if(isset($_SESSION["user_id"])){
+	if(isset($_SESSION["user_id"])){
 			echo "<p style ='text-align:right'>Hello, ".$_SESSION["first_name"]. "</p>";
-		}
-	
+	}
 ?>
 
 
@@ -35,14 +38,27 @@
 	<span>Registration</span>
  </div>
 
+<br>
+<div>
+	<span>What course do you want to add to your schedule?</span>
+</div>
+<div>
+	<span>Enter the CRN: </span>
+	<input type="text" name="crnID">
+	<input type="submit" name="submit" value="Submit">
+</div>
 
-  
+
+  <br></br>
+</div>
+<br></br>
+</div>
 
 <!-- End Page Content -->
 
 </div>
 
-<img src="./images/tower.jpg" class="w3-image w3-greyscale-min" style="width:100%" > 
+<img src="./images/tower.jpg" class="w3-image w3-greyscale-min" style="width:100%" /> 
 
 <!-- Footer -->
 
