@@ -60,7 +60,8 @@
 				join professor
 					on section.professor_id = professor.professor_id
 				join user
-					on professor.user_id = user.user_id;";
+					on professor.user_id = user.user_id
+				order by subject.title;";
 					
 	echo '<table id="course"> 
       <tr> 
